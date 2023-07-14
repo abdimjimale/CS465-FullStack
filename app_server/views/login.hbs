@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>{{title}}</title>
+</head>
+<body>
+    <div id="background">
+        <div id="page">
+            {{> header}}
+            <form class="login-form">
+                <h3>Login</h3>
+                <input type="email" placeholder="email@example.com" name="email" required /> 
+                <input type="password" name="password" >
+                <ul>
+                    <li>
+                        <button>login</button>
+                    </li>
+                    <li>forgot password</li>
+                </ul>
+            </form>
+        </div>
+        {{> footer }}
+    </div>
+</body>
+</html>
+
