@@ -2,10 +2,9 @@
   "name": "sample-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "serve": "nodemon server.js",
+    "start": "node ./bin/www"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +19,16 @@
     "mongoose": "^7.3.2",
     "morgan": "^1.10.0",
     "nodemon": "^1.14.9",
+    "request": "^2.88.2",
     "seedgoose": "^2.0.2"
+  },
+  "seedgoose": {
+    "modelBaseDirectory": "app_server/models",
+    "models": [
+      "*.js",
+      "!db.js"
+    ],
+    "data": "data",
+    "db": "mongodb://localhost:27017/travlr"
   }
 }
