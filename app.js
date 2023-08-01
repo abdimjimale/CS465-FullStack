@@ -8,6 +8,7 @@ require('dotenv').config()
 const app = express();
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
+require('./app_api/models/db');
 
 // routes
 const indexRouter = require('./app_server/routes/index');

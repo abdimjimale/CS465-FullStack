@@ -1,4 +1,4 @@
-const Trip = require('../models/trvlrModel')
+const Trip = require('../models/travlr')
 
 // GET: /trips - retrievs a list of all trips
 const get_trips = async(req, res) => {

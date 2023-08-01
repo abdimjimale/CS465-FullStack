@@ -2,10 +2,10 @@
   "name": "sample-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node ./bin/www",
+    "serve": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +23,14 @@
     "nodemon": "^1.14.9",
     "request": "^2.88.2",
     "seedgoose": "^2.0.2"
+  },
+  "seedgoose": {
+    "modelBaseDirectory": "app_server/models",
+    "models": [
+      "*.js",
+      "!db.js"
+    ],
+    "data": "data",
+    "db": "mongodb://localhost:27017/travlr"
   }
 }
