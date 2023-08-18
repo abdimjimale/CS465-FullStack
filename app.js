@@ -1,30 +1,30 @@
 require('dotenv').config();
 
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 // include reference to handlebars code
 const hbs = require('hbs');
 const passport = require('passport');
 // set up database connection
-require('./app_api/models/db');
+require('./app_api/database/db');
 
 require('./app_api/config/passport');
 
 // set up routers
-var indexRouter = require('./app_server/routes/index_router');
-var usersRouter = require('./app_server/routes/users');
-var travelRouter = require('./app_server/routes/travel_router');
-var aboutRouter = require('./app_server/routes/about_router');
-var contactRouter = require('./app_server/routes/contact_router');
-var mealsRouter = require('./app_server/routes/meals_router');
-var newsRouter = require('./app_server/routes/news_router');
-var roomsRouter = require('./app_server/routes/rooms_router');
+const indexRouter = require('./app_server/routes/index_router');
+const usersRouter = require('./app_server/routes/users');
+const travelRouter = require('./app_server/routes/travel_router');
+const aboutRouter = require('./app_server/routes/about_router');
+const contactRouter = require('./app_server/routes/contact_router');
+const mealsRouter = require('./app_server/routes/meals_router');
+const newsRouter = require('./app_server/routes/news_router');
+const roomsRouter = require('./app_server/routes/rooms_router');
 const apiRouter = require('./app_api/routes/index');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));

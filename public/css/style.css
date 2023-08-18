@@ -543,3 +543,26 @@ hr {
 #connect a.googleplus:hover {
 	background-position: 0 -197px;
 }
+
+
+----------------------------------- Authentication Form ---------------------------
+
+.login-form button {
+	padding: 10px;
+	border: 1px solid #2c9688;
+	background: #2c9688;
+	border-radius: 5px;
+}
+
+.login-form input {
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	display: block;
+}
+
+
+.login-form ul {
+	display: inline-flex;
+	justify-content: space-between;
+}

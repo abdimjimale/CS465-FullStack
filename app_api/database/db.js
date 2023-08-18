@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const host = process.env.DB_HOST || '127.0.0.1'
-const dbURL = `mongodb://${host}/travlr`;
+const dbURL = `mongodb://${host}/trvlr`;
 const readLine = require('readline');
 
 if (process.env.NODE_ENV === 'production') {
@@ -60,5 +60,5 @@ process.on('SIGTERM', () => {
 connect();
 
 // bring in the Mongoose schema
-require('./travlr');
-require('./user');
+require('./models/travlr');
+require('./models/user');
